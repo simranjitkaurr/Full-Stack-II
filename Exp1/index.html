@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Composer</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Post Composer</h1>
+
+    <label>Select Platform</label><br><br>
+
+    <select id="platform" onchange="changeLimit()">
+
+        <option value="280">Twitter</option>
+        <option value="200">Instagram</option>
+        <option value="500">LinkedIn</option>
+
+    </select>
+
+    <br><br>
+
+    <textarea
+        id="text"
+        placeholder="Write your post here..."
+        oninput="countCharacters()"></textarea>
+
+    <p>
+        <b>Character Count :</b>
+        <span id="count">0</span>
+    </p>
+
+    <p>
+        <b>Character Limit :</b>
+        <span id="limit">280</span>
+    </p>
+
+    <p id="message"></p>
+
+    <button onclick="saveDraft()">Save Draft</button>
+
+    <button onclick="submitPost()">Submit</button>
+
+    <h2>Saved Drafts</h2>
+
+    <ul id="draftList"></ul>
+
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
